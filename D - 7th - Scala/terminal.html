@@ -1,0 +1,229 @@
+<pre>(base) <font color="#26A269"><b>student@student</b></font>:<font color="#12488B"><b>~</b></font>$ su root
+Password: 
+su: Authentication failure
+(base) <font color="#26A269"><b>student@student</b></font>:<font color="#12488B"><b>~</b></font>$ su root
+Password: 
+root@student:/home/student# spark-shell
+23/04/25 11:11:54 WARN Utils: Your hostname, student resolves to a loopback address: 127.0.1.1; using 10.11.5.55 instead (on interface enp3s0)
+23/04/25 11:11:54 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to &quot;WARN&quot;.
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/04/25 11:12:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://10.11.5.55:4040
+Spark context available as &apos;sc&apos; (master = local[*], app id = local-1682401322979).
+Spark session available as &apos;spark&apos;.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  &apos;_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.1
+      /_/
+         
+Using Scala version 2.12.15 (OpenJDK 64-Bit Server VM, Java 11.0.18)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+<font color="#A347BA">scala&gt; </font>var x = 10
+<font color="#12488B"><b>x</b></font>: <font color="#26A269"><b>Int</b></font> = 10
+
+<font color="#A347BA">scala&gt; </font>var y = 5
+<font color="#12488B"><b>y</b></font>: <font color="#26A269"><b>Int</b></font> = 5
+
+<font color="#A347BA">scala&gt; </font>def add(firstInput:Int, secondInput:Int): Int={
+<font color="#A347BA">     | </font>val sum = fi
+filter   first   firstInput
+<font color="#A347BA">     | </font>val sum = fi
+filter   first   firstInput
+<font color="#A347BA">     | </font>val sum = firstInput + secondInput
+<font color="#A347BA">     | </font>return sum
+<font color="#A347BA">     | </font>}
+<font color="#12488B"><b>add</b></font>: <font color="#26A269"><b>(firstInput: Int, secondInput: Int)Int</b></font>
+
+<font color="#A347BA">scala&gt; </font>add(3,5)
+<font color="#12488B"><b>res0</b></font>: <font color="#26A269"><b>Int</b></font> = 8
+
+<font color="#A347BA">scala&gt; </font>class Computer(cpu:String, ram:String, rom:String){
+<font color="#A347BA">     | </font>val processor = cpu
+<font color="#A347BA">     | </font>val ram = ram
+<font color="#A347BA">     | </font>val rom = rom
+<font color="#A347BA">     | </font>
+<font color="#A347BA">     | </font>def define(upgradedCpu:String) = {processor = upgradedCpu}
+<font color="#A347BA">     | </font>}
+&lt;console&gt;:24: <font color="#C01C28">error: </font>ram is already defined as value ram
+       val ram = ram
+           ^
+&lt;console&gt;:25: <font color="#C01C28">error: </font>rom is already defined as value rom
+       val rom = rom
+           ^
+&lt;console&gt;:27: <font color="#C01C28">error: </font>reassignment to val
+       def define(upgradedCpu:String) = {processor = upgradedCpu}
+                                                   ^
+
+<font color="#A347BA">scala&gt; </font>class Computer(cpu:String, ram:String, rom:String){
+<font color="#A347BA">     | </font>     | val processor = cpu
+&lt;console&gt;:2: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+            | val processor = cpu
+              ^
+
+<font color="#A347BA">scala&gt; </font>     | val ram = ram
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+            | val ram = ram
+              ^
+
+<font color="#A347BA">scala&gt; </font>     | val rom = rom
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+            | val rom = rom
+              ^
+
+<font color="#A347BA">scala&gt; </font>     | 
+&lt;console&gt;:26: <font color="#C01C28">error: </font>illegal start of simple expression
+       }
+       ^
+
+<font color="#A347BA">scala&gt; </font>     | def define(upgradedCpu:String) = {processor = upgradedCpu}
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;def&apos; found.
+            | def define(upgradedCpu:String) = {processor = upgradedCpu}
+              ^
+
+<font color="#A347BA">scala&gt; </font>     | }
+&lt;console&gt;:1: <font color="#C01C28">error: </font>eof expected but &apos;}&apos; found.
+            | }
+              ^
+
+<font color="#A347BA">scala&gt; </font>&lt;pre&gt;class Computer(cpu:String, ram:String, rom:String){
+&lt;console&gt;:1: <font color="#C01C28">error: </font>in XML literal:  expected end of Scala block
+       &lt;pre&gt;class Computer(cpu:String, ram:String, rom:String){
+                                                               ^
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val processor = cpu
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+       &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val processor = cpu
+                                           ^
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val ram = ram
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+       &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val ram = ram
+                                           ^
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val rom = rom
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;val&apos; found.
+       &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;val rom = rom
+                                           ^
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;
+<font color="#12488B"><b>res2</b></font>: <font color="#26A269"><b>scala.xml.Elem</b></font> = &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;def define(upgradedCpu:String) = {processor = upgradedCpu}
+&lt;console&gt;:1: <font color="#C01C28">error: </font>&apos;;&apos; expected but &apos;def&apos; found.
+       &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;def define(upgradedCpu:String) = {processor = upgradedCpu}
+                                           ^
+
+<font color="#A347BA">scala&gt; </font>&lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;}&lt;/pre&gt;
+&lt;console&gt;:1: <font color="#C01C28">error: </font>eof expected but &apos;}&apos; found.
+       &lt;font color=&quot;#A347BA&quot;&gt;     | &lt;/font&gt;}&lt;/pre&gt;
+                                           ^
+
+<font color="#A347BA">scala&gt; </font>class Computer(cpu:String, ram : String){
+<font color="#A347BA">     | </font>val processor = cpu
+<font color="#A347BA">     | </font>val memory = ram
+<font color="#A347BA">     | </font>
+<font color="#A347BA">     | </font>def Upgrade(upCpu:String) = {processor = upCpu}
+<font color="#A347BA">     | </font>}
+&lt;console&gt;:26: <font color="#C01C28">error: </font>reassignment to val
+       def Upgrade(upCpu:String) = {processor = upCpu}
+                                              ^
+
+<font color="#A347BA">scala&gt; </font>class Computer(cpu:String, ram : String){
+<font color="#A347BA">     | </font>val processor = cpu
+<font color="#A347BA">     | </font>val memory = ram
+<font color="#A347BA">     | </font>var processor2 = cpu
+<font color="#A347BA">     | </font>
+<font color="#A347BA">     | </font>def Upgrade(upCpu:String) = {processor2 = upCpu}
+<font color="#A347BA">     | </font>}
+defined class Computer
+
+<font color="#A347BA">scala&gt; </font>val pc = new Computer(&quot;i5&quot;,4)
+&lt;console&gt;:23: <font color="#C01C28">error: </font>type mismatch;
+ found   : Int(4)
+ required: String
+       val pc = new Computer(&quot;i5&quot;,4)
+                                  ^
+
+<font color="#A347BA">scala&gt; </font>val pc = new Computer(&quot;i5&quot;,&quot;4&quot;)
+<font color="#12488B"><b>pc</b></font>: <font color="#26A269"><b>Computer</b></font> = Computer@2f879f35
+
+<font color="#A347BA">scala&gt; </font>pc.Upgrade
+   def Upgrade(upCpu: String): Unit
+
+<font color="#A347BA">scala&gt; </font>pc.Upgrade(&quot;i7&quot;)
+
+<font color="#A347BA">scala&gt; </font>println(&quot;hellow world&quot;)
+hellow world
+
+<font color="#A347BA">scala&gt; </font>println(pc.cpu)
+&lt;console&gt;:24: <font color="#C01C28">error: </font>value cpu is not a member of Computer
+       println(pc.cpu)
+                  ^
+
+<font color="#A347BA">scala&gt; </font>println(pc.processor)
+i5
+
+<font color="#A347BA">scala&gt; </font>println(pc.processor2)
+i7
+
+<font color="#A347BA">scala&gt; </font>val xs = List(2,4,6,8,10)
+<font color="#12488B"><b>xs</b></font>: <font color="#26A269"><b>List[Int]</b></font> = List(2, 4, 6, 8, 10)
+
+<font color="#A347BA">scala&gt; </font>val sum = xs reduce{(x,y) =&gt; x+y}
+<font color="#12488B"><b>sum</b></font>: <font color="#26A269"><b>Int</b></font> = 30
+
+<font color="#A347BA">scala&gt; </font>val product = xs reduce{(x,y) =&gt; x*y}
+<font color="#12488B"><b>product</b></font>: <font color="#26A269"><b>Int</b></font> = 3840
+
+<font color="#A347BA">scala&gt; </font>val max = xs reduce{(x,y) =&gt; if(x &gt; y) x else y}
+<font color="#12488B"><b>max</b></font>: <font color="#26A269"><b>Int</b></font> = 10
+
+<font color="#A347BA">scala&gt; </font>val min = xs reduce{(x,y) =&gt; if(x&lt;y) x else y}
+<font color="#12488B"><b>min</b></font>: <font color="#26A269"><b>Int</b></font> = 2
+
+<font color="#A347BA">scala&gt; </font>val xs = (1 to 100).toList
+<font color="#12488B"><b>xs</b></font>: <font color="#26A269"><b>List[Int]</b></font> = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)
+
+<font color="#A347BA">scala&gt; </font>val even = xs filter{_%2 == 0}
+<font color="#12488B"><b>even</b></font>: <font color="#26A269"><b>List[Int]</b></font> = List(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100)
+
+<font color="#A347BA">scala&gt; </font>val birthdayboy(&quot;pratham&quot;,&quot;23-apirl&quot;,&quot;happybirthday&quot;)
+<font color="#A347BA">     | </font>
+<font color="#A347BA">     | </font>root@student:/home/student# spark-shell
+23/04/25 11:54:16 WARN Utils: Your hostname, student resolves to a loopback address: 127.0.1.1; using 10.11.5.55 instead (on interface enp3s0)
+23/04/25 11:54:16 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to &quot;WARN&quot;.
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/04/25 11:54:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://10.11.5.55:4040
+Spark context available as &apos;sc&apos; (master = local[*], app id = local-1682403862213).
+Spark session available as &apos;spark&apos;.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  &apos;_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.1
+      /_/
+         
+Using Scala version 2.12.15 (OpenJDK 64-Bit Server VM, Java 11.0.18)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+<font color="#A347BA">scala&gt; </font>val birthdayboy = (&quot;pratham&quot;,&quot;23-apirl&quot;,&quot;happybirthday&quot;)
+<font color="#12488B"><b>birthdayboy</b></font>: <font color="#26A269"><b>(String, String, String)</b></font> = (pratham,23-apirl,happybirthday)
+
+<font color="#A347BA">scala&gt; </font>birthdayboy[0]
+&lt;console&gt;:1: <font color="#C01C28">error: </font>identifier expected but integer literal found.
+       birthdayboy[0]
+                   ^
+
+<font color="#A347BA">scala&gt; </font>println(birthdayboy)
+(pratham,23-apirl,happybirthday)
+
+<font color="#A347BA">scala&gt; </font>
+</pre>
