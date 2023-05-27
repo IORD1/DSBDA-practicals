@@ -3,12 +3,12 @@ import org.apache.spark.sql.{Column, SparkSession}
 import org.apache.spark.sql.functions.{regexp_extract,sum,col,to_date,udf,to_timestamp,desc,dayofyear,year}
 
 val spark = SparkSession.builder().appName("WebLog").master("local[*]").getOrCreate()
-val base_df = spark.read.text("/home/deptii/Web_Log/weblog.csv")
+val base_df = spark.read.text("weblog.csv")
 base_df.printSchema()
 
 import spark.implicits._
 //this will produce a dataframe with a single column called value
-val base_df = spark.read.text("/home/deptii/Web_Log/weblog.csv")
+val base_df = spark.read.text("weblog.csv")
 base_df.printSchema()
 //let's look at some of the data
 base_df.show(3,false)
